@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="heading text-center">Rock Paper Scissors</h1>
+    </header>
+
+    <section class="game-section">
+        <h3 class="text-center" id="round">Round: 0</h3>
+        <div class="game-arena">
+            <div class="player-selection">
+                <img src="img/fist.png" alt="icon" id="player-chose">
+                <p class="text-center">You</p>
+            </div>
+            <div class="points" id="points">
+                0:0
+            </div>
+
+            <div class="computer-selection">
+                <img src="img/fist.png" alt="icon" id="computer-chose">
+                <p class="text-center">Computer</p>
+            </div>
+
+        </div>
+
+        <div class="player-interface">
+            <div class="game-info">
+                <p>Welcome to Rock Paper Scissors!</p>
+            </div>
+            <div class="player-hand">
+                <button class="player-choicebtn" id="rock"><img src="img/rock.png" alt="rock-icon"></button>
+                <button class="player-choicebtn" id="paper"><img src="img/paper.png" alt="paper-icon"></button>
+                <button class="player-choicebtn" id="scissors"><img src="img/scissors.png" alt="scissors-icon"></button>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="modal-container">
+        <div id="modal">
+            <div class="modal-header" id = "modalHeader">
+            </div>
+            <div class="modal-body text-center">
+                <p id="totalRound">Rounds Played: </p>
+                <p id="finalWinner">Winner: </p>
+                <p id="finalTies">Ties: </p>
+            </div>
+            <div class="modal-footer text-center">
+                <button class="btn" onclick="restart()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

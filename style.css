@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(83, 83, 83, 0.5);
+    background-image: url('/img/bliss.jpg');
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 97vh;
+    font-family: 'Anton', sans-serif;
+}
+
+header {
+    padding: 20px 18px;
+    font-size: 1.2rem;
+}
+
+.player-choicebtn {
+    background: white;
+    border: 2px solid black;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.player-choicebtn:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.game-arena {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 36vh;
+}
+
+.player-selection img,
+.computer-selection img {
+    border: 2px solid black;
+    background-color: white;
+    padding: 4px;
+}
+
+#computer-chose {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.player-selection p,
+.computer-selection p {
+    font-size: 1.3rem;
+}
+
+.points {
+    font-size: 2.5rem;
+}
+
+
+.player-interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.game-info {
+    font-size: 1.5rem;
+    padding: 8px 0;
+}
+
+
+/** Modal */
+
+#modal {
+
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    animation-name: animate-modal;
+    animation-duration: .4s;
+}
+
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.modal-header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.modal-body>p{
+    margin: 10px auto;
+}
+
+.btn{
+    padding: 8px;
+    font-family: inherit;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/*? Modal Animation */
+@keyframes animate-modal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+/*! Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+h3.text-center {
+    font-size: 1.5rem;
+}
+
+/*? Media Query */
+
+@media only screen and (max-width: 510px)
+{
+    #modal{
+        width: 90%;
+        height: auto;
+        font-size: 1rem;
+    }
+}
